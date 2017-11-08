@@ -1,0 +1,42 @@
+.left-right
+    align-items: flex-start
+    display: flex
+    text-align: left
+    +mobile
+        display: block
+    +stackable
+    .left, .right
+        flex-basis: auto
+        flex-grow: 0
+        flex-shrink: 0
+    .left
+        margin-left: 0.5rem
+        +mobile
+            text-align: center
+            padding-bottom: 0.6rem
+            margin-bottom: 0.6rem
+    .right
+        margin-right: 0.5rem
+        +mobile
+            border-top: $default-border
+            padding-top: 0.6rem
+            margin-top: 0.6rem
+    .middle
+        flex-basis: auto
+        flex-grow: 1
+        flex-shrink: 1
+        text-align: left
+    a
+        text-decoration: none
+        color: $font-color
+        h2
+            color: $primary
+    img
+        border-radius: 100px
+        max-width: 128px
+
+    h1,h2,h3,h4,h5,p,span
+        margin: 0 0.5rem
+
+    small
+        margin: 0 1.5rem

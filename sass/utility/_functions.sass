@@ -1,0 +1,34 @@
+//power : https://css-tricks.com/snippets/sass/power-function/
+@function pow($number, $exponent)
+  $value: 1
+  @if $exponent > 0
+    @for $i from 1 through $exponent
+      $value: $value * $number
+  @else if $exponent < 0
+    @for $i from 1 through -$exponent
+      $value: $value / $number
+  @return $value
+
+//luminance function - https://css-tricks.com/snippets/sass/luminance-color-function/
+@function luminance($color)
+  $rgb: ('red': red($color), 'green': green($color), 'blue': blue($color))
+
+  @each $name, $value in $rgb
+    $adjusted: 0
+    $value: $value / 255
+
+    @if $value < 0.03928
+      $value: $value / 12.92
+    @else
+      $value: ($value + .055) / 1.055
+      $value: pow($value, 2)
+    $rgb: map-merge($rgb, ($name: $value))
+
+  @return (map-get($rgb, 'red') * .2126) + (map-get($rgb, 'green') * .7152) + (map-get($rgb, 'blue') * .0722)
+
+
+@function fontColorFor($color,$dark,$bright)
+  @if (luminance($color) > 0.55)
+    @return $font-color-dark
+  @else
+    @return $font-color-bright

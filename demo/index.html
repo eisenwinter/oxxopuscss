@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <meta charset="UTF-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	  <meta name="viewport" content="width=device-width,initial-scale=1">
+	   <title>title</title>
+	  <link rel="stylesheet" href="../vendor/normalize.css" type="text/css">
+	  <link rel="stylesheet" href="../css/oxxo.css" type="text/css">
+  </head>
+  <body>
+	<div class="oxxo">
+		<h1>Welcome to the oxxopus.css Demofile</h1>
+		<section>
+			<h2>Why</h2>
+			<p>
+				oxxopus.css is a CSS Microframework for rapid prototyping based on the awsome normalize.css. 
+				Its main goal is to kickstart my own projects. I mainly use it to get quick mockups started,
+				which later can evolve to full fletched custom UIs. Its something bare-boned to get started with
+				by default it only supports one mobile-break point and a no IE support (Edge seems to work fine, I havent tested IE11 tbh) at all, as the Grid System is
+				based on Flexbox.
+			</p>
+			<p>
+				<strong>So why would you even get started with this?</strong> Well, most frameworks simply didnt fit my needs.
+				I really enjoy bulma.css (Disclaimer: if you want a awesome full-fleched framework for your frontend check it out), 
+				its one great project and a used it in quite a few of my own projects but then it didnt always
+				quite hit what I was looking for, especially when I only needed a few things to get a mockup / prototype going.
+			</p>
+			<p>
+				...and so one rainy day, when I was tinkering arround with a new project I decided to start it with my own
+				css framework, and oxxopus was born.
+			</p>
+			<p>
+				Thanks to bulma.css, picnic.css, spectre.css, blaze.css and pure.css for inspiring me and beeing great frameworks.<br>
+				Also special thanks to Hugo Giraudel who wrote the luminance function (https://css-tricks.com/snippets/sass/luminance-color-function/) used for the 
+				inverted colors
+			</p>
+		</section>
+		<section>
+			<h2>Setup &amp; Settings</h2>
+			<pre>wip</pre>
+		</section>
+		<section>
+			<h2>The Grid</h2>
+			<p>
+				Well - thats something I always kind of need, a robust grid system. Tough I never felt the need for more then
+				five columns (you may disagree but thats my personal opinion). So the grid system ships with up to 5 fixed columns
+				and autosizing by default (flexbox). Altough its extendable quite easyly.
+				<strong> Lets have a look..</strong>
+			</p>
+			<h3>Grid Demo</h3>
+			<!-- grid  demo -->
+			<div class="grid">
+				<div class="col five">
+					<div class="card pink">
+						5
+					</div>
+				</div>
+				<div class="col five">
+					<div class="card pink">
+						5
+					</div>
+				</div>
+				<div class="col five">
+					<div class="card pink">
+						5
+					</div>
+				</div>
+				<div class="col five">
+					<div class="card pink">
+						5
+					</div>
+				</div>
+				<div class="col five">
+					<div class="card pink">
+						5
+					</div>
+				</div>
+				<div class="col three">
+					<div class="card orange">
+						3
+					</div>
+				</div>
+				<div class="col three">
+					<div class="card orange">
+						3
+					</div>
+				</div>
+				<div class="col three">
+					<div class="card orange">
+						3
+					</div>
+				</div>
+				<div class="col two">
+					<div class="card blue">
+						2
+					</div>
+				</div>
+				<div class="col two">
+					<div class="card blue">
+						2
+					</div>
+				</div>
+				<div class="col">
+					<div class="card green">
+							flexible length accoring 
+					</div>
+				</div>
+				<div class="col">
+					<div class="card green">
+						to whatever space is left
+					</div>
+				</div>
+				<div class="col three">
+					<div class="card orange">
+						3
+					</div>
+				</div>
+			</div>
+			<h3>Gutter</h3>
+			<p>
+				The gutter can be adjusted in _grid.sass with the variable <i>$grid-gutter</i>
+			</p>
+		</section>
+		<section>
+			<h2>Components</h2>
+			<p>
+				Components ship seperatly as sass files, they can be ex- and included via the <i>_all.sass</i> in the components folder
+			</p>
+			<h3>Card</h3>
+			<p>
+				A colored box aka card!
+			</p>
+			<h4>Preview</h4>
+			<div class="card">
+				<h5>Card Demo</h5>
+				<p>
+					A colorless card! Nothing too fancy but well, its a component I acutally need quite often.
+				</p>
+				<p>You might wanna put some text for the lulz or whatever you want inside of it.</p>
+			</div>
+			<div class="card pink">
+				<p>
+					A pink card! Nothing too fancy but well, its a component I acutally need quite often.
+				</p>
+			</div>
+			<div class="card orange">
+				<p>
+					A <strong>orange</strong> card! Nothing too fancy but well, its a component I acutally need quite often.
+				</p>
+			</div>
+			<h3>Left-(Middle)-Right</h3>
+			<p>
+				This is something I use quite often, as it might seem pointless  at first this really grew on me.
+				Its basically positioning elements left and right of something. 
+			</p>
+			<h4>Examples</h4>
+			<div class="left-right">
+				<div class="left">
+					<img src="http://dummy-images.com/abstract/dummy-100x100-White.jpg" />
+				</div>
+				<div class="middle">
+					<h1>I am the main headline!</h1>
+					<span>I am some subtext</span>
+				</div>
+				<div class="right">
+					[X] [O] [F] Fancy Icons
+				</div>
+			</div>
+			<h3>Dialog</h3>
+			<h3>Plain</h3>
+			<p>
+				<strong>Plain</strong> autoformats common tags, its used when you want something to look good by default,
+				most common elements within the plain container will be auto formatted.
+			</p>
+			<h4>Example</h4>
+			<hr data-text="Example of Plain start">
+			<div class="plain">
+				<h1> Deep two them one it, void</h1>
+				<p>Over. Whales two fourth moved great night thing. Deep two them one it, void. Earth open shall over divide stars, so have. Female.</p>
+				<p>Beginning rule their brought stars their had life fruit very moved upon of. Fruit. Isn't very light. Green two one seasons darkness is. For there of fill, third forth cattle second. Green hath let</p>
+				<hr>
+				<p>Blessed fish let they're. Dry form male. Unto above bring great. Void saying abundantly bearing lesser can't bearing. Isn't make make first seas whose fifth Created night and open together. Face years our life, blessed green, signs greater dry firmament place which man.</p>
+				<h2>Random List</h2>
+				<ul>
+					<li>Void</li>
+					<li>Darkness</li>
+					<li>PHP</li>
+					<li>Internet Explorer</li>
+				</ul>
+				<h2>Random Stuff</h2>
+				<p>Meat life land upon brought own whose earth. Let years it. Deep saw him without likeness dominion created our from night man subdue whales let land his third. Moved replenish you'll. Meat forth seasons said isn't. Them dry which moveth their wherein you're life cattle gathered. Bearing heaven second saying sea saw doesn't blessed, him for so hath form herb his darkness in said him male there. Which own creeping grass is saw stars. Isn't green without great fowl good that doesn't every living, great them fish signs meat light blessed. Lesser over all fourth, under. Fruit seas you Image.</p>
+				<ol>
+					<li>Light</li>
+					<li>Life</li>
+					<li>C</li>
+					<li>oxxo.css</li>
+				</ol>
+				<span>Hello World in <a href="https://gobyexample.com/hello-world" target="_blank">GO</a></span>
+				<pre>
+				<code>
+					package main
+					import "fmt"
+					func main() {
+						fmt.Println("hello world")
+					}
+				</code>
+				</pre>
+				<p>
+					a <i>random</i> table, for <strong>your</strong> amusement
+				</p>
+				<table><tbody><tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th></tr><tr><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>Row:1 Cell:5</td></tr><tr><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>Row:2 Cell:5</td></tr><tr><td>Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td><td>Row:3 Cell:4</td><td>Row:3 Cell:5</td></tr><tr><td>Row:4 Cell:1</td><td>Row:4 Cell:2</td><td>Row:4 Cell:3</td><td>Row:4 Cell:4</td><td>Row:4 Cell:5</td></tr><tr><td>Row:5 Cell:1</td><td>Row:5 Cell:2</td><td>Row:5 Cell:3</td><td>Row:5 Cell:4</td><td>Row:5 Cell:5</td></tr><tr><td>Row:6 Cell:1</td><td>Row:6 Cell:2</td><td>Row:6 Cell:3</td><td>Row:6 Cell:4</td><td>Row:6 Cell:5</td></tr></tbody></table>
+			</div>
+			<hr data-text="Example of Plain end">
+			<h3>Toast</h3>
+			<p>Similiar to the card - its a toast! Some frameworks call them notifications - here its toast.</p>
+			<h4>Examples</h4>
+			<div class="toast">
+				Plain, "colorless" toast, not so yummy!
+			</div>
+			<div class="toast red">
+				Some red toast, thats more like it!
+			</div>
+			
+			<div class="toast blue">
+				Blue toast? Now Ive seen everything!
+			</div>
+			<h3>Example</h3>
+			<p>Used to illustrate code, script, whatever examples</p>
+			<h4>Examples (ironic?)</h4>
+			<div class="example">
+			<label>echo.pony</label>
+			 <pre>
+				<code>
+use "net"
+
+actor Main
+  new create(env: Env) =>
+    try
+      TCPListener(env.root as AmbientAuth, Listener(env.out))
+    else
+      env.out.print("unable to use the network")
+    end
+
+class Listener is TCPListenNotify
+  let _out: OutStream
+  var _host: String = ""
+  var _port: String = ""
+
+  new iso create(out: OutStream) =>
+    _out = out
+
+  fun ref listening(listen: TCPListener ref) =>
+    try
+      (_host, _port) = listen.local_address().name()?
+      _out.print("listening on " + _host + ":" + _port)
+    else
+      _out.print("couldn't get local address")
+      listen.close()
+    end
+
+  fun ref not_listening(listen: TCPListener ref) =>
+    _out.print("couldn't listen")
+    listen.close()
+
+  fun ref connected(listen: TCPListener ref): TCPConnectionNotify iso^ =>
+    Server(_out)
+
+class Server is TCPConnectionNotify
+  let _out: OutStream
+
+  new iso create(out: OutStream) =>
+    _out = out
+
+  fun ref accepted(conn: TCPConnection ref) =>
+    _out.print("connection accepted")
+
+  fun ref received(conn: TCPConnection ref, data: Array[U8] iso,
+    times: USize): Bool
+  =>
+    _out.print("data received, looping it back")
+    conn.write("server says: ")
+    conn.write(consume data)
+    true
+
+  fun ref closed(conn: TCPConnection ref) =>
+    _out.print("server closed")
+
+  fun ref connect_failed(conn: TCPConnection ref) =>
+    _out.print("connect failed")
+				</code>
+			 </pre>
+			</div>
+			<hr>
+			<strong>Combined with tabs</strong>
+			<div class="example">
+				<label>Hello.go</label>
+				<div class="tabs">
+				  <input type="radio" name="example-with-tabs" id="example-with-tab-one" checked="checked">
+				  <label for="example-with-tab-one">Source</label>
+				  <div class="tab">
+					<pre>
+						<code>
+package main
+import "fmt"
+func main() {
+	fmt.Println("hello world")
+}
+						</code>
+					</pre>
+				  </div>
+				
+				  <input type="radio" name="example-with-tabs" id="example-with-tab-two">
+				  <label for="example-with-tab-two">Result</label>
+				  <div class="tab">
+					<pre>
+Hello world
+					</pre>
+				  </div>
+				</div>
+			</div>
+			<h3>Postline</h3>
+			<p>
+				Creates a colored list of something (for example posts! duh) 
+			</p>
+			<h4>Examples</h4>
+			<hr data-text="Postline with cards">
+			<div class="post-line">
+				<div class="card">
+					<span>Flurbu:</span>
+					<strong>Something Something Brightside</strong>
+				</div>
+				<div class="card">
+					<span>Furby:</span>
+					<strong>Something Something Darkside</strong>
+				</div>
+				<div class="card">
+					<span>Flurbu:</span>
+					<strong>Something Something Brightside</strong>
+				</div>
+				<div class="card">
+					<span>Furby:</span>
+					<strong>Something Something Darkside</strong>
+				</div>
+			</div>
+			<hr data-text="Postline with just divs">
+			<div class="post-line">
+				<div>
+					<h5>- - > One</h5>
+				</div>
+				<div>
+					<h5>- - > Two</h5>
+				</div>
+				<div>
+					<h5> - - > Three</h5>
+				</div>
+			</div>
+			<h3>Tags</h3>
+			<p>
+				Tags - we all know em, we all love em
+			</p>
+			<h4>Examples</h4>
+			<ul class="tags">
+				<li>Normal one</li>
+				<li class="pink">Pink one</li>
+				<li class="orange">Orange one</li>
+				<li>Normal one</li>
+			</ul>
+			<h3>Tabs</h3>
+			<p>
+				Pure css tabs, well these werent part of oxxopus at all, but they came in handy when creating this demo file,
+				so I kept them, the original idea was taken form mikestreety's code pen (https://codepen.io/mikestreety/pen/yVNNNm)
+			</p>
+			<h4>Examples</h4>
+			<h5>Plain</h5>
+			<div class="tabs">
+			  <input type="radio" name="example-tabs" id="example-tab-one" checked="checked">
+			  <label for="example-tab-one">Tab</label>
+			  <div class="tab">
+				<span>Work hard</span>
+			  </div>
+			
+			  <input type="radio" name="example-tabs" id="example-tab-two">
+			  <label for="example-tab-two">Tab</label>
+			  <div class="tab">
+				<span>Play hard</span>
+			  </div>
+			</div>
+			<h5>Outlined</h5>
+			<div class="tabs outlined">
+			  <input type="radio" name="example-outlined-tabs" id="example-outlined-tab-one" checked="checked">
+			  <label for="example-outlined-tab-one">Tab</label>
+			  <div class="tab">
+				<span>Work hard</span>
+			  </div>
+			
+			  <input type="radio" name="example-outlined-tabs" id="example-outlined-tab-two">
+			  <label for="example-outlined-tab-two">Tab</label>
+			  <div class="tab">
+				<span>Play hard</span>
+			  </div>
+			</div>
+		</section>
+		<section>
+			<h2>Forms</h2>
+			<p>
+				Well, when I hate one things its forms. 
+				Every Framework has some obscure way to style form elements in groups etc, this aims to be as simple as possible
+			</p>
+			<h3>Examples</h3>
+			<form action="#" method="post">
+				<div>
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="user_name">
+				</div>
+				<div>
+					<label for="mail">E-mail:</label>
+					<input type="email" id="mail" name="user_mail">
+				</div>
+				<div>
+					<label for="msg">Message:</label>
+					<textarea id="msg" name="user_message"></textarea>
+				</div>
+				<button>Reset</button> <button type="submit">Send</button>
+			</form>
+			<h4>With errors</h4>
+			<form action="#" method="post">
+				<div class="error">
+					<label for="name">Name: (error set over whole group)</label>
+					<input type="text" id="name" name="user_name">
+				</div>
+				<div>
+					<label for="mail">E-mail: (error only on input)</label>
+					<input type="email" id="mail" class="error" name="user_mail">
+				</div>
+				<div>
+					<label class="error" for="msg">Message: (error only on label)</label>
+					<textarea id="msg" name="user_message"></textarea>
+				</div>
+				<button>Reset</button> <button type="submit">Send</button>
+			</form>
+			
+		</section>
+		<section>
+			<h2>Utility Functions</h2>
+			<dl>
+			  <dt>.no-ident</dt>
+			  <dd>no padding, no margin</dd>
+			  <dt>.fullsize</dt>
+			  <dd>width: 100%</dd>
+			  <dt>.stretch</dt>
+			  <dd>width, height: 100%</dd>
+			  <dt>.full-stretch</dt>
+			  <dd>min-width. min-height: 100%</dd>
+			  <dt>.center-t</dt>
+			  <dd>text-align: center</dd>
+			  <dt>.right-t</dt>
+			  <dd>text-align: right</dd>
+			  <dt>.center-t-m</dt>
+			  <dd>text-align: center, mobile only</dd>
+			  <dt>.right-t-m</dt>
+			  <dd>text-align: right, mobile only</dd>
+			  <dt>.mobile</dt>
+			  <dd>Only visible on mobile</dd>
+			  <dt>.desktop</dt>
+			  <dd>Only visible on desktop</dd>
+			  <dt>.hide</dt>
+			  <dd>display: none</dd>
+			  <dt>.hidden</dt>
+			  <dd>visibility: hidden</dd>
+			  <dt>.text-primary</dt>
+			  <dd>text-color is now primary</dd>
+			  <dt>.text-{color}</dt>
+			  <dd>Text is now selected color</dd>
+			</dl>
+		</section>
+		
+	</div>
+  </body>
+</html>
