@@ -1,12 +1,15 @@
 html
 	box-sizing: border-box
 *, *:before, *:after
-	box-sizing: border-box
+	box-sizing: inherit
 body
 	background-color: $body-bg
 	font-family: $font-base
 	min-height: 100%
 	margin: 0
+	font-size: $font-size
+a
+	color: $primary
 .oxxo
 	background-color: $content-bg
 	min-height: 100%
@@ -16,8 +19,13 @@ body
 	+desktop
 		max-width: 1024px
 		margin: 0 auto
-	& > * 
+	& > *
 		margin-top: 0
+	&.border
+		+border
+	&.topped
+		margin-top: 1.5rem
+		border-top: 2px solid $primary
 figure
 	margin: 0.4rem
 

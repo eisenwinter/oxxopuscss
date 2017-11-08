@@ -11,7 +11,7 @@ $list: "input[type='email']", "input[type='number']", "input[type='search']", "i
   #{$input}:focus
     border-color: darken($default-border-color, 10%)
     outline : 0
-	
+
   #{$input}.error, form .error #{$input}
     border-color: $error-color
 
@@ -44,11 +44,16 @@ button, .button
   background-color: $boxed-background
   padding: 0.5rem
   margin-top: 0.5rem
+  text-decoration: none
   +stackable
   +border
   +variations
   +extend-variations
-  
+  & a
+    text-decoration: none
+  & .icon
+    display: inline-block
+    margin: 0 3px
+
 form .error label, label.error
-  color: $error-color 
-  
+  color: $error-color
