@@ -36,10 +36,14 @@
 				inverted colors
 			</p>
 		</section>
+	</div>
+	<div class="oxxo topped">
 		<section>
 			<h2>Setup &amp; Settings</h2>
 			<pre>wip</pre>
 		</section>
+	</div>
+	<div class="oxxo topped">
 		<section>
 			<h2>The Grid</h2>
 			<p>
@@ -122,116 +126,293 @@
 				The gutter can be adjusted in _grid.sass with the variable <i>$grid-gutter</i>
 			</p>
 		</section>
+	</div>
+	<div class="oxxo topped">
 		<section>
 			<h2>Components</h2>
 			<p>
 				Components ship seperatly as sass files, they can be ex- and included via the <i>_all.sass</i> in the components folder
 			</p>
-			<h3>Card</h3>
-			<p>
-				A colored box aka card!
-			</p>
-			<h4>Preview</h4>
-			<div class="card">
-				<h5>Card Demo</h5>
-				<p>
-					A colorless card! Nothing too fancy but well, its a component I acutally need quite often.
-				</p>
-				<p>You might wanna put some text for the lulz or whatever you want inside of it.</p>
-			</div>
-			<div class="card pink">
-				<p>
-					A pink card! Nothing too fancy but well, its a component I acutally need quite often.
-				</p>
-			</div>
-			<div class="card orange">
-				<p>
-					A <strong>orange</strong> card! Nothing too fancy but well, its a component I acutally need quite often.
-				</p>
-			</div>
-			<h3>Left-(Middle)-Right</h3>
-			<p>
-				This is something I use quite often, as it might seem pointless  at first this really grew on me.
-				Its basically positioning elements left and right of something.
-			</p>
-			<h4>Examples</h4>
-			<div class="left-right">
-				<div class="left">
-					<img src="http://dummy-images.com/abstract/dummy-100x100-White.jpg" />
-				</div>
-				<div class="middle">
-					<h1>I am the main headline!</h1>
-					<span>I am some subtext</span>
-				</div>
-				<div class="right">
-					[X] [O] [F] Fancy Icons
-				</div>
-			</div>
-			<h3>Dialog</h3>
-			<h3>Plain</h3>
-			<p>
-				<strong>Plain</strong> autoformats common tags, its used when you want something to look good by default,
-				most common elements within the plain container will be auto formatted.
-			</p>
-			<h4>Example</h4>
-			<hr data-text="Example of Plain start">
-			<div class="plain">
-				<h1> Deep two them one it, void</h1>
-				<p>Over. Whales two fourth moved great night thing. Deep two them one it, void. Earth open shall over divide stars, so have. Female.</p>
-				<p>Beginning rule their brought stars their had life fruit very moved upon of. Fruit. Isn't very light. Green two one seasons darkness is. For there of fill, third forth cattle second. Green hath let</p>
-				<hr>
-				<p>Blessed fish let they're. Dry form male. Unto above bring great. Void saying abundantly bearing lesser can't bearing. Isn't make make first seas whose fifth Created night and open together. Face years our life, blessed green, signs greater dry firmament place which man.</p>
-				<h2>Random List</h2>
-				<ul>
-					<li>Void</li>
-					<li>Darkness</li>
-					<li>PHP</li>
-					<li>Internet Explorer</li>
-				</ul>
-				<h2>Random Stuff</h2>
-				<p>Meat life land upon brought own whose earth. Let years it. Deep saw him without likeness dominion created our from night man subdue whales let land his third. Moved replenish you'll. Meat forth seasons said isn't. Them dry which moveth their wherein you're life cattle gathered. Bearing heaven second saying sea saw doesn't blessed, him for so hath form herb his darkness in said him male there. Which own creeping grass is saw stars. Isn't green without great fowl good that doesn't every living, great them fish signs meat light blessed. Lesser over all fourth, under. Fruit seas you Image.</p>
-				<ol>
-					<li>Light</li>
-					<li>Life</li>
-					<li>C</li>
-					<li>oxxo.css</li>
-				</ol>
-				<span>Hello World in <a href="https://gobyexample.com/hello-world" target="_blank">GO</a></span>
-				<pre>
-				<code>
-					package main
-					import "fmt"
-					func main() {
-						fmt.Println("hello world")
-					}
-				</code>
-				</pre>
-				<p>
-					a <i>random</i> table, for <strong>your</strong> amusement
-				</p>
-				<table><tbody><tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th></tr><tr><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>Row:1 Cell:5</td></tr><tr><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>Row:2 Cell:5</td></tr><tr><td>Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td><td>Row:3 Cell:4</td><td>Row:3 Cell:5</td></tr><tr><td>Row:4 Cell:1</td><td>Row:4 Cell:2</td><td>Row:4 Cell:3</td><td>Row:4 Cell:4</td><td>Row:4 Cell:5</td></tr><tr><td>Row:5 Cell:1</td><td>Row:5 Cell:2</td><td>Row:5 Cell:3</td><td>Row:5 Cell:4</td><td>Row:5 Cell:5</td></tr><tr><td>Row:6 Cell:1</td><td>Row:6 Cell:2</td><td>Row:6 Cell:3</td><td>Row:6 Cell:4</td><td>Row:6 Cell:5</td></tr></tbody></table>
-			</div>
-			<hr data-text="Example of Plain end">
-			<h3>Toast</h3>
-			<p>Similiar to the card - its a toast! Some frameworks call them notifications - here its toast.</p>
-			<h4>Examples</h4>
-			<div class="toast">
-				Plain, "colorless" toast, not so yummy!
-			</div>
-			<div class="toast red">
-				Some red toast, thats more like it!
-			</div>
+			<div class="tabs outlined">
+			  <input type="radio" name="example-components-tabs" id="example-components-tab-one" checked="checked">
+			  <label for="example-components-tab-one">Card</label>
+			  <div class="tab">
+					<h3>Card</h3>
+					<p>
+						A colored box aka card!
+					</p>
+					<h4>Examples</h4>
+					<div class="card">
+						<h5>Card Demo</h5>
+						<p>
+							A colorless card! Nothing too fancy but well, its a component I acutally need quite often.
+						</p>
+						<p>You might wanna put some text for the lulz or whatever you want inside of it.</p>
+					</div>
+					<div class="card pink">
+						<p>
+							A pink card! Nothing too fancy but well, its a component I acutally need quite often.
+						</p>
+					</div>
+					<div class="card orange">
+						<p>
+							A <strong>orange</strong> card! Nothing too fancy but well, its a component I acutally need quite often.
+						</p>
+					</div>
+					<h4>Code</h4>
+					<div class="example">
+						<code>
+&#x3C;div class=&#x22;card&#x22;&#x3E;
+&#x9;&#x3C;h5&#x3E;Card Demo&#x3C;/h5&#x3E;
+&#x9;&#x3C;p&#x3E;
+&#x9;&#x9;A colorless card! Nothing too fancy but well, 
+			its a component I acutally need quite often.
+&#x9;&#x3C;/p&#x3E;
+&#x9;&#x3C;p&#x3E;You might wanna put some text for the lulz or whatever you want inside of it.&#x3C;/p&#x3E;
+&#x3C;/div&#x3E;
 
-			<div class="toast blue">
-				Blue toast? Now Ive seen everything!
-			</div>
-			<h3>Example</h3>
-			<p>Used to illustrate code, script, whatever examples</p>
-			<h4>Examples (ironic?)</h4>
-			<div class="example">
-			<label>echo.pony</label>
-			 <pre>
-				<code>
+&#x3C;div class=&#x22;card pink&#x22;&#x3E;
+&#x9;&#x3C;p&#x3E;
+&#x9;&#x9;A pink card! Nothing too fancy but well, 
+				its a component I acutally need quite often.
+&#x9;&#x3C;/p&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;card orange&#x22;&#x3E;
+&#x9;&#x3C;p&#x3E;
+&#x9;&#x9;A &#x3C;strong&#x3E;orange&#x3C;/strong&#x3E; card! 
+			Nothing too fancy but well, its a component I acutally need quite often.
+&#x9;&#x3C;/p&#x3E;
+&#x3C;/div&#x3E;
+						</code>
+					</div>
+			  </div>
+			  
+			  
+			  <input type="radio" name="example-components-tabs" id="example-components-tab-two">
+			  <label for="example-components-tab-two">Left-(Middle)-Right</label>
+			  <div class="tab">
+			  	<h3>Left-(Middle)-Right</h3>
+				<p>
+					This is something I use quite often, as it might seem pointless  at first this really grew on me.
+					Its basically positioning elements left and right of something.
+				</p>
+				<h4>Examples</h4>
+				<!-- plain example -->
+				<hr data-text="Simple Example" />
+				<div class="left-right">
+					<div class="left">
+						<img src="http://dummy-images.com/abstract/dummy-100x100-White.jpg" />
+					</div>
+					<div class="middle">
+						<h1>I am the main headline!</h1>
+						<span>I am some subtext</span>
+					</div>
+					<div class="right">
+						[X] [O] [F] (imagine Fancy Icons)
+					</div>
+				</div>
+				<!-- within card -->
+				<hr data-text="Inside a card" />
+				<div class="card">
+					<div class="left-right">
+						<div class="middle">
+							<strong>Watch me</strong>
+							<span>I am inside a card!</span>
+						</div>
+						<div class="right">
+							2017-01-01
+						</div>
+					</div>
+					<p>
+						Are you ready for more?
+					</p>
+				</div>
+				<hr data-text="Just left side" />
+				<div class="left-right">
+					<div class="left">
+						<img src="http://dummy-images.com/people/dummy-60x60-Centurion.jpg" />
+					</div>
+					<div class="middle">
+						<p>
+							<strong>User X </strong> likes to ride his tiny bicycle to work every 12 hours. He really enjoys it.
+						</p>
+						<p>
+							But would <strong>you</strong> enjoy it?
+						</p>
+						<p>
+							Yeah I tough so...
+						</p>
+					</div>
+				</div>
+				
+				<h4>Code</h4>
+				<hr data-text="Simple Example" />
+				<div class="example">
+					<code>
+&#x3C;div class=&#x22;left-right&#x22;&#x3E;
+&#x9;&#x3C;div class=&#x22;left&#x22;&#x3E;
+&#x9;&#x9;&#x3C;img src=&#x22;http://dummy-images.com/abstract/dummy-100x100-White.jpg&#x22; /&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;middle&#x22;&#x3E;
+&#x9;&#x9;&#x3C;h1&#x3E;I am the main headline!&#x3C;/h1&#x3E;
+&#x9;&#x9;&#x3C;span&#x3E;I am some subtext&#x3C;/span&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;right&#x22;&#x3E;
+&#x9;&#x9;[X] [O] [F] (imagine Fancy Icons)
+&#x9;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+					</code>
+				</div>
+				<hr data-text="Inside a card" />
+				<div class="example">
+					<code>
+&#x3C;div class=&#x22;card&#x22;&#x3E;
+&#x9;&#x3C;div class=&#x22;left-right&#x22;&#x3E;
+&#x9;&#x9;&#x3C;div class=&#x22;middle&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x3C;strong&#x3E;Watch me&#x3C;/strong&#x3E;
+&#x9;&#x9;&#x9;&#x3C;span&#x3E;I am inside a card!&#x3C;/span&#x3E;
+&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x3C;div class=&#x22;right&#x22;&#x3E;
+&#x9;&#x9;&#x9;2017-01-01
+&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;p&#x3E;
+&#x9;&#x9;Are you ready for more?
+&#x9;&#x3C;/p&#x3E;
+&#x3C;/div&#x3E;
+					</code>
+				</div>
+				<hr data-text="Just left side" />
+				<div class="example">
+					<code>
+&#x3C;div class=&#x22;left-right&#x22;&#x3E;
+&#x9;&#x3C;div class=&#x22;left&#x22;&#x3E;
+&#x9;&#x9;&#x3C;img src=&#x22;http://dummy-images.com/people/dummy-60x60-Centurion.jpg&#x22; /&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;middle&#x22;&#x3E;
+&#x9;&#x9;&#x3C;p&#x3E;
+&#x9;&#x9;&#x9;&#x3C;strong&#x3E;User X &#x3C;/strong&#x3E; likes to ride his tiny bicycle to work every 12 hours. He really enjoys it.
+&#x9;&#x9;&#x3C;/p&#x3E;
+&#x9;&#x9;&#x3C;p&#x3E;
+&#x9;&#x9;&#x9;But would &#x3C;strong&#x3E;you&#x3C;/strong&#x3E; enjoy it?
+&#x9;&#x9;&#x3C;/p&#x3E;
+&#x9;&#x9;&#x3C;p&#x3E;
+&#x9;&#x9;&#x9;Yeah I tough so...
+&#x9;&#x9;&#x3C;/p&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+					</code>
+				</div>
+			  </div>
+			 
+			  
+			  <input type="radio" name="example-components-tabs" id="example-components-tab-three">
+			  <label for="example-components-tab-three">Plain</label>
+			  <div class="tab">
+				<h3>Plain</h3>
+				<p>
+					<strong>Plain</strong> autoformats common tags, its used when you want something to look good by default,
+					most common elements within the plain container will be auto formatted. This exists because the project it was created for
+					had lots of user generated markdown included.
+				</p>
+				<h4>Example</h4>
+				<hr data-text="Example of Plain start">
+				<div class="plain">
+					<h1> Deep two them one it, void</h1>
+					<p>Over. Whales two fourth moved great night thing. Deep two them one it, void. Earth open shall over divide stars, so have. Female.</p>
+					<p>Beginning rule their brought stars their had life fruit very moved upon of. Fruit. Isn't very light. Green two one seasons darkness is. For there of fill, third forth cattle second. Green hath let</p>
+					<hr>
+					<p>Blessed fish let they're. Dry form male. Unto above bring great. Void saying abundantly bearing lesser can't bearing. Isn't make make first seas whose fifth Created night and open together. Face years our life, blessed green, signs greater dry firmament place which man.</p>
+					<h2>Random List</h2>
+					<ul>
+						<li>Void</li>
+						<li>Darkness</li>
+						<li>PHP</li>
+						<li>Internet Explorer</li>
+					</ul>
+					<h2>Random Stuff</h2>
+					<p>Meat life land upon brought own whose earth. Let years it. Deep saw him without likeness dominion created our from night man subdue whales let land his third. Moved replenish you'll. Meat forth seasons said isn't. Them dry which moveth their wherein you're life cattle gathered. Bearing heaven second saying sea saw doesn't blessed, him for so hath form herb his darkness in said him male there. Which own creeping grass is saw stars. Isn't green without great fowl good that doesn't every living, great them fish signs meat light blessed. Lesser over all fourth, under. Fruit seas you Image.</p>
+					<ol>
+						<li>Light</li>
+						<li>Life</li>
+						<li>C</li>
+						<li>oxxo.css</li>
+					</ol>
+					<span>Hello World in <a href="https://gobyexample.com/hello-world" target="_blank">GO</a></span>
+					<pre>
+					<code>
+						package main
+						import "fmt"
+						func main() {
+							fmt.Println("hello world")
+						}
+					</code>
+					</pre>
+					<p>
+						a <i>random</i> table, for <strong>your</strong> amusement
+					</p>
+					<table><tbody><tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th></tr><tr><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>Row:1 Cell:5</td></tr><tr><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>Row:2 Cell:5</td></tr><tr><td>Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td><td>Row:3 Cell:4</td><td>Row:3 Cell:5</td></tr><tr><td>Row:4 Cell:1</td><td>Row:4 Cell:2</td><td>Row:4 Cell:3</td><td>Row:4 Cell:4</td><td>Row:4 Cell:5</td></tr><tr><td>Row:5 Cell:1</td><td>Row:5 Cell:2</td><td>Row:5 Cell:3</td><td>Row:5 Cell:4</td><td>Row:5 Cell:5</td></tr><tr><td>Row:6 Cell:1</td><td>Row:6 Cell:2</td><td>Row:6 Cell:3</td><td>Row:6 Cell:4</td><td>Row:6 Cell:5</td></tr></tbody></table>
+				</div>
+				<hr data-text="Example of Plain end">
+				
+				<h4>Code</h4>
+				<div class="example">
+					<code>
+&#x3C;div class=&#x22;plain&#x22;&#x3E;
+  {{unformated html content}}
+&#x3C;/div&#x3E;
+					</code>
+				</div>
+				
+			  </div>
+			  
+			  <input type="radio" name="example-components-tabs" id="example-components-tab-four">
+			  <label for="example-components-tab-four">Toast</label>
+			  <div class="tab">
+			  	<h3>Toast</h3>
+				<p>Similiar to the card - its a toast! Some frameworks call them notifications - here its toast.</p>
+				<p>They can be placed arround the site by adding <strong>.center-top</strong>, <strong>.bottom-left</strong> or <strong>.bottom-right</strong> class.</p>
+				<h4>Examples</h4>
+				<div class="toast">
+					Plain, "colorless" toast, not so yummy!
+				</div>
+				<div class="toast red">
+					Some red toast, thats more like it!
+				</div>
+
+				<div class="toast blue">
+					Blue toast? Now Ive seen everything!
+				</div>
+				
+				<h4>Code</h4>
+				<div class="example">
+					<code>
+&#x3C;div class=&#x22;toast&#x22;&#x3E;
+&#x9;Plain, &#x22;colorless&#x22; toast, not so yummy!
+&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;toast red&#x22;&#x3E;
+&#x9;Some red toast, thats more like it!
+&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;toast blue&#x22;&#x3E;
+&#x9;Blue toast? Now Ive seen everything!
+&#x3C;/div&#x3E;
+					</code>
+				</div>
+				
+			  </div>
+			  
+			  <input type="radio" name="example-components-tabs" id="example-components-tab-five">
+			  <label for="example-components-tab-five">Example</label>
+			  <div class="tab">
+				<h3>Example</h3>
+				<p>Used to illustrate code, script, whatever examples</p>
+				<h4>Examples (ironic?)</h4>
+				<hr data-text="Simple example">
+				<div class="example">
+				<label>echo.pony</label>
+				 <pre>
+					<code>
 use "net"
 
 actor Main
@@ -288,119 +469,256 @@ class Server is TCPConnectionNotify
 
   fun ref connect_failed(conn: TCPConnection ref) =>
     _out.print("connect failed")
-				</code>
-			 </pre>
-			</div>
-			<hr>
-			<strong>Combined with tabs</strong>
-			<div class="example">
-				<label>Hello.go</label>
-				<div class="tabs">
-				  <input type="radio" name="example-with-tabs" id="example-with-tab-one" checked="checked">
-				  <label for="example-with-tab-one">Source</label>
-				  <div class="tab">
-					<pre>
+					</code>
+				 </pre>
+				</div>
+				<hr data-text="Combined with tabs">
+				<div class="example">
+					<label>Hello.go</label>
+					<div class="tabs">
+					  <input type="radio" name="example-with-tabs" id="example-with-tab-one" checked="checked">
+					  <label for="example-with-tab-one">Source</label>
+					  <div class="tab">
 						<code>
-package main
+ package main
 import "fmt"
 func main() {
 	fmt.Println("hello world")
 }
 						</code>
-					</pre>
-				  </div>
+					  </div>
 
-				  <input type="radio" name="example-with-tabs" id="example-with-tab-two">
-				  <label for="example-with-tab-two">Result</label>
+					  <input type="radio" name="example-with-tabs" id="example-with-tab-two">
+					  <label for="example-with-tab-two">Result</label>
+					  <div class="tab">
+						<pre>
+	Hello world
+						</pre>
+					  </div>
+					</div>
+				</div>
+			  </div>
+			  
+			  <input type="radio" name="example-components-tabs" id="example-components-tab-six">
+			  <label for="example-components-tab-six">Postline</label>
+			  <div class="tab">
+				<h3>Postline</h3>
+				<p>
+					Creates a colored list of something (for example posts! duh)
+				</p>
+				<h4>Examples</h4>
+				<hr data-text="Postline with cards">
+				<div class="post-line">
+					<div class="card">
+						<span>Flurbu:</span>
+						<strong>Something Something Brightside</strong>
+					</div>
+					<div class="card">
+						<span>Furby:</span>
+						<strong>Something Something Darkside</strong>
+					</div>
+					<div class="card">
+						<span>Flurbu:</span>
+						<strong>Something Something Brightside</strong>
+					</div>
+					<div class="card">
+						<span>Furby:</span>
+						<strong>Something Something Darkside</strong>
+					</div>
+				</div>
+				<hr data-text="Postline with just divs">
+				<div class="post-line">
+					<div>
+						<h5>- - > One</h5>
+					</div>
+					<div>
+						<h5>- - > Two</h5>
+					</div>
+					<div>
+						<h5> - - > Three</h5>
+					</div>
+				</div>
+				<h4>Code</h4>
+				<hr data-text="Postline with cards">
+				<div class="example">
+					<code>
+&#x3C;div class=&#x22;post-line&#x22;&#x3E;
+&#x9;&#x3C;div class=&#x22;card&#x22;&#x3E;
+&#x9;&#x9;&#x3C;span&#x3E;Flurbu:&#x3C;/span&#x3E;
+&#x9;&#x9;&#x3C;strong&#x3E;Something Something Brightside&#x3C;/strong&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;card&#x22;&#x3E;
+&#x9;&#x9;&#x3C;span&#x3E;Furby:&#x3C;/span&#x3E;
+&#x9;&#x9;&#x3C;strong&#x3E;Something Something Darkside&#x3C;/strong&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;card&#x22;&#x3E;
+&#x9;&#x9;&#x3C;span&#x3E;Flurbu:&#x3C;/span&#x3E;
+&#x9;&#x9;&#x3C;strong&#x3E;Something Something Brightside&#x3C;/strong&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;card&#x22;&#x3E;
+&#x9;&#x9;&#x3C;span&#x3E;Furby:&#x3C;/span&#x3E;
+&#x9;&#x9;&#x3C;strong&#x3E;Something Something Darkside&#x3C;/strong&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+					</code>
+				</div>
+				<hr data-text="Postline with just divs">
+				<div class="example">
+					<code>
+&#x3C;div class=&#x22;post-line&#x22;&#x3E;
+&#x9;&#x3C;div&#x3E;
+&#x9;&#x9;&#x3C;h5&#x3E;- - &#x3E; One&#x3C;/h5&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div&#x3E;
+&#x9;&#x9;&#x3C;h5&#x3E;- - &#x3E; Two&#x3C;/h5&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div&#x3E;
+&#x9;&#x9;&#x3C;h5&#x3E; - - &#x3E; Three&#x3C;/h5&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+					</code>
+				</div>
+			  </div>
+
+			  <input type="radio" name="example-components-tabs" id="example-components-tab-seven">
+			  <label for="example-components-tab-seven">Tags</label>
+			  <div class="tab">
+			  	<h3>Tags</h3>
+				<p>
+					Tags - we all know em, we all love em
+				</p>
+				<h4>Examples</h4>
+				<ul class="tags">
+					<li>Normal one</li>
+					<li class="pink">Pink one</li>
+					<li class="orange">Orange one</li>
+					<li>Normal one</li>
+				</ul>
+				<h4>Code</h4>
+				<div class="example">
+					<code>
+&#x3C;ul class=&#x22;tags&#x22;&#x3E;
+&#x9;&#x3C;li&#x3E;Normal one&#x3C;/li&#x3E;
+&#x9;&#x3C;li class=&#x22;pink&#x22;&#x3E;Pink one&#x3C;/li&#x3E;
+&#x9;&#x3C;li class=&#x22;orange&#x22;&#x3E;Orange one&#x3C;/li&#x3E;
+&#x9;&#x3C;li&#x3E;Normal one&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+					</code>
+				</div>
+			  </div>
+			  
+			  <input type="radio" name="example-components-tabs" id="example-components-tab-eight">
+			  <label for="example-components-tab-eight">Tabs</label>
+			  <div class="tab">
+				<h3>Tabs</h3>
+				<p>
+					Pure css tabs, well these werent part of oxxopus at all, but they came in handy when creating this demo file,
+					so I kept them, the original idea was taken form mikestreety's code pen (https://codepen.io/mikestreety/pen/yVNNNm)
+				</p>
+				<h4>Examples</h4>
+				<hr data-text="Plain Tabs">
+				<div class="tabs">
+				  <input type="radio" name="example-tabs" id="example-tab-one" checked="checked">
+				  <label for="example-tab-one">Tab</label>
 				  <div class="tab">
-					<pre>
-Hello world
-					</pre>
+					<span>Work hard</span>
+				  </div>
+
+				  <input type="radio" name="example-tabs" id="example-tab-two">
+				  <label for="example-tab-two">Tab</label>
+				  <div class="tab">
+					<span>Play hard</span>
 				  </div>
 				</div>
-			</div>
-			<h3>Postline</h3>
-			<p>
-				Creates a colored list of something (for example posts! duh)
-			</p>
-			<h4>Examples</h4>
-			<hr data-text="Postline with cards">
-			<div class="post-line">
-				<div class="card">
-					<span>Flurbu:</span>
-					<strong>Something Something Brightside</strong>
-				</div>
-				<div class="card">
-					<span>Furby:</span>
-					<strong>Something Something Darkside</strong>
-				</div>
-				<div class="card">
-					<span>Flurbu:</span>
-					<strong>Something Something Brightside</strong>
-				</div>
-				<div class="card">
-					<span>Furby:</span>
-					<strong>Something Something Darkside</strong>
-				</div>
-			</div>
-			<hr data-text="Postline with just divs">
-			<div class="post-line">
-				<div>
-					<h5>- - > One</h5>
-				</div>
-				<div>
-					<h5>- - > Two</h5>
-				</div>
-				<div>
-					<h5> - - > Three</h5>
-				</div>
-			</div>
-			<h3>Tags</h3>
-			<p>
-				Tags - we all know em, we all love em
-			</p>
-			<h4>Examples</h4>
-			<ul class="tags">
-				<li>Normal one</li>
-				<li class="pink">Pink one</li>
-				<li class="orange">Orange one</li>
-				<li>Normal one</li>
-			</ul>
-			<h3>Tabs</h3>
-			<p>
-				Pure css tabs, well these werent part of oxxopus at all, but they came in handy when creating this demo file,
-				so I kept them, the original idea was taken form mikestreety's code pen (https://codepen.io/mikestreety/pen/yVNNNm)
-			</p>
-			<h4>Examples</h4>
-			<h5>Plain</h5>
-			<div class="tabs">
-			  <input type="radio" name="example-tabs" id="example-tab-one" checked="checked">
-			  <label for="example-tab-one">Tab</label>
-			  <div class="tab">
-				<span>Work hard</span>
-			  </div>
+				<hr data-text="Outlined Tabs">
+				<div class="tabs outlined">
+				  <input type="radio" name="example-outlined-tabs" id="example-outlined-tab-one" checked="checked">
+				  <label for="example-outlined-tab-one">Tab</label>
+				  <div class="tab">
+					<span>Work hard</span>
+				  </div>
 
-			  <input type="radio" name="example-tabs" id="example-tab-two">
-			  <label for="example-tab-two">Tab</label>
-			  <div class="tab">
-				<span>Play hard</span>
-			  </div>
-			</div>
-			<h5>Outlined</h5>
-			<div class="tabs outlined">
-			  <input type="radio" name="example-outlined-tabs" id="example-outlined-tab-one" checked="checked">
-			  <label for="example-outlined-tab-one">Tab</label>
-			  <div class="tab">
-				<span>Work hard</span>
-			  </div>
+				  <input type="radio" name="example-outlined-tabs" id="example-outlined-tab-two">
+				  <label for="example-outlined-tab-two">Tab</label>
+				  <div class="tab">
+					<span>Play hard</span>
+				  </div>
+				</div>
+				
+				<h4>Code</h4>
+				<hr data-text="Plain Tabs">
+				<div class="example">
+					<code>
+&#x3C;div class=&#x22;tabs&#x22;&#x3E;
+  &#x3C;input type=&#x22;radio&#x22; name=&#x22;example-tabs&#x22; id=&#x22;example-tab-one&#x22; checked=&#x22;checked&#x22;&#x3E;
+  &#x3C;label for=&#x22;example-tab-one&#x22;&#x3E;Tab&#x3C;/label&#x3E;
+  &#x3C;div class=&#x22;tab&#x22;&#x3E;
+&#x9;&#x3C;span&#x3E;Work hard&#x3C;/span&#x3E;
+  &#x3C;/div&#x3E;
 
-			  <input type="radio" name="example-outlined-tabs" id="example-outlined-tab-two">
-			  <label for="example-outlined-tab-two">Tab</label>
-			  <div class="tab">
-				<span>Play hard</span>
+  &#x3C;input type=&#x22;radio&#x22; name=&#x22;example-tabs&#x22; id=&#x22;example-tab-two&#x22;&#x3E;
+  &#x3C;label for=&#x22;example-tab-two&#x22;&#x3E;Tab&#x3C;/label&#x3E;
+  &#x3C;div class=&#x22;tab&#x22;&#x3E;
+&#x9;&#x3C;span&#x3E;Play hard&#x3C;/span&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+					</code>
+				</div>
+				<hr data-text="Outlined Tabs">
+				<div class="example">
+					<code>
+&#x3C;div class=&#x22;tabs outlined&#x22;&#x3E;
+  &#x3C;input type=&#x22;radio&#x22; name=&#x22;example-outlined-tabs&#x22; id=&#x22;example-outlined-tab-one&#x22; checked=&#x22;checked&#x22;&#x3E;
+  &#x3C;label for=&#x22;example-outlined-tab-one&#x22;&#x3E;Tab&#x3C;/label&#x3E;
+  &#x3C;div class=&#x22;tab&#x22;&#x3E;
+&#x9;&#x9;&#x3C;span&#x3E;Work hard&#x3C;/span&#x3E;
+  &#x3C;/div&#x3E;
+
+  &#x3C;input type=&#x22;radio&#x22; name=&#x22;example-outlined-tabs&#x22; id=&#x22;example-outlined-tab-two&#x22;&#x3E;
+  &#x3C;label for=&#x22;example-outlined-tab-two&#x22;&#x3E;Tab&#x3C;/label&#x3E;
+  &#x3C;div class=&#x22;tab&#x22;&#x3E;
+&#x9;&#x9;&#x3C;span&#x3E;Play hard&#x3C;/span&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+					</code>
+				</div>
 			  </div>
+			  
+			
+			  
+			  <input type="radio" name="example-components-tabs" id="example-components-tab-nine">
+			  <label for="example-components-tab-nine">Dialog</label>
+			  <div class="tab">
+				<h3>Dialog</h3>
+				<p>
+					A dialog which can be displayed, the framework ships without any JavaScript, so its your choice how to make it work,
+					for the example I whipped up some plain vanilla JavaScript.
+				</p>
+				<h4>Example</h4>
+				<a id="dialog-demo" class="button">Open</a>
+				<h4>Code</h4>
+				<div class="example">
+					<code>
+&#x3C;div class=&#x22;darken&#x22;&#x3E;
+&#x9;&#x3C;div class=&#x22;dialog&#x22;&#x3E;
+&#x9;&#x9;&#x3C;h1&#x3E;I am a mighty dialog&#x3C;/h1&#x3E;
+&#x9;&#x9;&#x3C;p&#x3E;
+&#x9;&#x9;&#x9;Tremble before my JavaScript!
+&#x9;&#x9;&#x3C;/p&#x3E;
+&#x9;&#x9;&#x3C;button class=&#x22;button pink&#x22;&#x3E;Ok&#x3C;/button&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+					</code>
+				
+				</div>
+			  </div>
+				
+				
+
 			</div>
 		</section>
+	</div>
+	<div class="oxxo topped">
 		<section>
 			<h2>Forms</h2>
 			<p>
@@ -441,6 +759,8 @@ Hello world
 			</form>
 
 		</section>
+	</div>
+	<div class="oxxo topped">
 		<section>
 			<h2>Utility Functions</h2>
 			<dl>
@@ -476,5 +796,41 @@ Hello world
 		</section>
 
 	</div>
+	<div class="darken hide" id="darken-dialog">
+		<div class="dialog">
+			<h1>I am a mighty dialog</h1>
+			<p>
+				Tremble before my JavaScript!
+			</p>
+			<button class="button pink" id="dialog-ok">Ok</button>
+		</div>
+	</div>
+	<script>
+		var remClass = function(el,className){
+			if (el.classList)
+			  el.classList.remove(className);
+			else
+			  el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+		}
+		
+		var addClass = function(el,className){
+		if (el.classList)
+		  el.classList.add(className);
+		else
+		  el.className += ' ' + className;
+		}
+		
+		var el = document.getElementById("dialog-demo");
+		el.addEventListener('click', function(){
+			var dark = document.getElementById("darken-dialog"); 
+			remClass(dark,'hide');
+		});
+		
+		var btn = document.getElementById("dialog-ok");
+		btn.addEventListener('click', function(){
+			var dark = document.getElementById("darken-dialog"); 
+			addClass(dark,'hide');
+		});
+	</script>
   </body>
 </html>
