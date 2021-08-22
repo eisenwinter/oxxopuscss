@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>oxxopus css demo file</title>
+    <link rel="stylesheet" href="assets/page.css" type="text/css">
+</head>
+
+<body class="has-nav">
+    <nav>
+        <ul>
+            <li><a>oxxo</a></li>
+            <li><a href="#grid">Grid</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#boxed">Boxed</a></li>
+            <li><a href="#notification">Notification</a></li>
+            <li><a href="#tags">Tags</a></li>
+            <li><a href="#tabs">Tabs</a></li>
+        </ul>
+    </nav>
+    <section class="section">
+        <h2 id="grid">The Grid</h2>
+        <p class="block-space">
+            Well - thats something I always kind of need, a robust grid system. Tough I never felt the need for more then
+            five columns (you may disagree but thats my personal opinion). So the grid system ships with up to 5 fixed columns
+            and autosizing by default (flexbox). Altough its extendable quite easyly.
+            <strong> Lets have a look..</strong>
+        </p>
+        <!-- grid  demo -->
+        <div class="grid">
+            <div class="col five">
+                <div class="boxed red">
+                    5
+                </div>
+            </div>
+            <div class="col five">
+                <div class="boxed red">
+                    5
+                </div>
+            </div>
+            <div class="col five">
+                <div class="boxed red">
+                    5
+                </div>
+            </div>
+            <div class="col five">
+                <div class="boxed red">
+                    5
+                </div>
+            </div>
+            <div class="col five">
+                <div class="boxed red">
+                    5
+                </div>
+            </div>
+            <div class="col three">
+                <div class="boxed">
+                    3
+                </div>
+            </div>
+            <div class="col three">
+                <div class="boxed">
+                    3
+                </div>
+            </div>
+            <div class="col three">
+                <div class="boxed">
+                    3
+                </div>
+            </div>
+            <div class="col two">
+                <div class="boxed blue">
+                    2
+                </div>
+            </div>
+            <div class="col two">
+                <div class="boxed blue">
+                    2
+                </div>
+            </div>
+            <div class="col">
+                <div class="boxed green">
+                        flexible length accoring
+                </div>
+            </div>
+            <div class="col">
+                <div class="boxed green">
+                    to whatever space is left
+                </div>
+            </div>
+            <div class="col three">
+                <div class="boxed orange">
+                    3
+                </div>
+            </div>
+        </div>
+        <h3>Gutter</h3>
+        <p>
+            The gutter can be adjusted in _grid.sass with the variable <i>$grid-gutter</i>
+        </p>
+    </section>
+    <section class="section fade-in animation-cascade-1--slow">
+        <h2 id="forms">Forms</h2>
+        <p>
+            Well, when I hate one things its forms.
+            Every Framework has some obscure way to style form elements in groups etc, this aims to be as simple as
+            possible
+        </p>
+        <form action="#" method="post">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name">
+            </div>
+            <div>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="user_mail">
+            </div>
+            <div>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </div>
+            <button>Reset</button> <button type="submit">Send</button>
+        </form>
+        <h4>With errors</h4>
+        <form action="#" method="post">
+            <div class="error">
+                <label for="name">Name: (error set over whole group)</label>
+                <input type="text" id="name" name="user_name">
+            </div>
+            <div>
+                <label for="mail">E-mail: (error only on input)</label>
+                <input type="email" id="mail" class="error" name="user_mail">
+            </div>
+            <div>
+                <label class="error" for="msg">Message: (error only on label)</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </div>
+            <button>Reset</button> <button type="submit">Send</button>
+        </form>
+
+    </section>
+    <section class="section fade-in animation-cascade-2--slow">
+        <h2 id="boxed">Boxed</h2>
+        <p class="block-space">Boxed has been  proven robust enough to eliminate card.</p>
+        <div class="boxed">
+            <h3 class="like-h5 flex center-h center-v">a boxed example</h3>
+            <form class="block-space">
+                <div class="grid">
+                    <div class="col form-col">
+                        <label>Select a file</label>
+                        <input name="qr" required="" type="file" accept="image/png">
+
+                    </div>
+                    <div class="col form-col">
+                        <label>Language</label>
+                        <input type="radio" checked="" id="lang_de" name="lang" value="de">
+                        <label class="for-radio" for="lang_de">Deutsch</label>
+                        &nbsp;
+                        <input type="radio" id="lang_en" name="lang" value="en">
+                        <label class="for-radio" for="lang_en">English</label>
+                    </div>
+                    <div class="col form-col">
+                        <label for="format">Format</label>
+                        <select name="format" id="format">
+                            <option value="default" selected="">Landscape</option>
+                            <option value="portrait">Portrait</option>
+                        </select>
+                    </div>
+                    <div class="col form-col down">
+                        <button type="submit" class="button blue">Generate</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <section class="section">
+        <h2 id="notification">Notification</h2>
+        <div class="notification red">
+            <strong class="like-h5">Attention!</strong>
+            <p>I am too lazy to re-write the docs. Since noone besides me is using it its just loose examples now .</p>
+          
+            </p>
+          </div>
+    </section>
+
+    <section class="section">
+        <h2 id="tags">Tags</h2>
+    	<h4>Examples</h4>
+				<ul class="tags">
+					<li>Normal one</li>
+					<li class="red">Red one</li>
+					<li class="blue">Blue one</li>
+					<li>Normal one</li>
+				</ul>
+    </section>
+
+    <section class="section">
+        <h2 id="tabs">Tabs</h2>
+        <h4>Examples</h4>
+        <hr data-text="Plain Tabs">
+        <div class="tabs">
+          <input type="radio" name="example-tabs" id="example-tab-one" checked="checked">
+          <label for="example-tab-one">Tab</label>
+          <div class="tab">
+            <span>Work hard</span>
+          </div>
+
+          <input type="radio" name="example-tabs" id="example-tab-two">
+          <label for="example-tab-two">Tab</label>
+          <div class="tab">
+            <span>Play hard</span>
+          </div>
+        </div>
+        <hr data-text="Outlined Tabs">
+        <div class="tabs outlined">
+          <input type="radio" name="example-outlined-tabs" id="example-outlined-tab-one" checked="checked">
+          <label for="example-outlined-tab-one">Tab</label>
+          <div class="tab">
+            <span>Work hard</span>
+          </div>
+
+          <input type="radio" name="example-outlined-tabs" id="example-outlined-tab-two">
+          <label for="example-outlined-tab-two">Tab</label>
+          <div class="tab">
+            <span>Play hard</span>
+          </div>
+        </div>
+    </section>
+</body>
+
+</html>
