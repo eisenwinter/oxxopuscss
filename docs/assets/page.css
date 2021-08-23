@@ -1023,6 +1023,14 @@ select.fullwidth {
 .grid .form-col > select {
   width: 100%;
 }
+.grid .form-col > button, .grid .form-col .button {
+  width: 100%;
+}
+@media screen and (min-width: 769px) {
+  .grid .form-col > button, .grid .form-col .button {
+    width: auto;
+  }
+}
 @media screen and (min-width: 769px) {
   .form-col {
     flex-direction: row;
@@ -1038,7 +1046,6 @@ select.fullwidth {
     flex-basis: 100%;
   }
   .form-col label.for-radio, .form-col label.for-checkbox {
-    margin-bottom: 0;
     flex-basis: 0;
   }
 }
@@ -1153,6 +1160,54 @@ select.fullwidth {
   flex-shrink: 0;
 }
 
+.burger {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 55px;
+  height: 50px;
+}
+.burger.is-light .line {
+  background-color: #fff;
+  color: #777;
+}
+.burger.is-dark .line {
+  background-color: #4a4a4a;
+  color: #fff;
+}
+.burger .line {
+  position: absolute;
+  left: 10px;
+  height: 3px;
+  width: 35px;
+  border-radius: 0.35rem;
+  display: block;
+  transition: 0.5s;
+  transform-origin: center;
+}
+.burger .line:nth-child(1) {
+  top: 12px;
+}
+.burger .line:nth-child(2) {
+  top: 24px;
+}
+.burger .line:nth-child(3) {
+  top: 36px;
+}
+.burger.is-active .line:nth-child(1) {
+  transform: translateY(12px)rotate(-45deg);
+}
+.burger.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+.burger.is-active .line:nth-child(3) {
+  transform: translateY(-12px)rotate(45deg);
+}
+
+.nav .burger {
+  top: 7px;
+}
+
 .nav {
   background-color: #fff;
 }
@@ -1231,6 +1286,14 @@ select.fullwidth {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
+}
+.has-aside .aside.is-light {
+  background-color: #fff;
+  color: #777;
+}
+.has-aside .aside.is-dark {
+  background-color: #4a4a4a;
+  color: #fff;
 }
 @media screen and (min-width: 769px) {
   .has-aside .aside {
