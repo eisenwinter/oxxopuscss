@@ -464,6 +464,33 @@ address {
   margin: 0;
 }
 
+.input {
+  border: 1px solid #eee;
+  border-radius: 0;
+  box-shadow: none;
+  height: 38px;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+.input.shadow {
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.5);
+}
+.boxed .input {
+  background-color: #fff;
+}
+
+.input:focus {
+  border-color: #d5d5d5;
+  outline: 0;
+}
+
+.input.error, form .error .input {
+  border-color: #ee4d4d;
+}
+
 input[type=email] {
   border: 1px solid #eee;
   border-radius: 0;
@@ -943,31 +970,82 @@ select.fullwidth {
   width: 100%;
 }
 
-.grid .form-col {
+.form-col {
   display: flex;
   justify-content: stretch;
   align-items: baseline;
+  align-content: center;
+  flex-direction: column;
+  padding: 0.75rem;
 }
-.grid .form-col label {
-  margin-right: 0.7rem;
+.grid .form-col {
+  display: flex;
+}
+.grid .form-col > * {
+  margin: 0.5rem;
+}
+.grid .form-col > input[type=email] {
+  width: 100%;
+}
+.grid .form-col > input[type=number] {
+  width: 100%;
+}
+.grid .form-col > input[type=search] {
+  width: 100%;
+}
+.grid .form-col > input[type=text] {
+  width: 100%;
+}
+.grid .form-col > input[type=text i] {
+  width: 100%;
+}
+.grid .form-col > input[type=tel] {
+  width: 100%;
+}
+.grid .form-col > input[type=url] {
+  width: 100%;
+}
+.grid .form-col > input[type=password] {
+  width: 100%;
+}
+.grid .form-col > input[type=datetime] {
+  width: 100%;
+}
+.grid .form-col > input[type=datetime-local] {
+  width: 100%;
+}
+.grid .form-col > textarea {
+  width: 100%;
+}
+.grid .form-col > select {
+  width: 100%;
+}
+.grid .form-col > select {
+  width: 100%;
+}
+.grid .form-col > button, .grid .form-col .button {
+  width: 100%;
 }
 @media screen and (min-width: 769px) {
-  .grid .form-col {
+  .grid .form-col > button, .grid .form-col .button {
+    width: auto;
+  }
+}
+@media screen and (min-width: 769px) {
+  .form-col {
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     margin-right: 0;
   }
-  .grid .form-col.down {
-    align-items: flex-end;
+  .form-col.down {
+    margin-top: 2rem;
   }
-  .grid .form-col label {
-    margin-bottom: 0.7rem;
+  .form-col label {
     flex-basis: 100%;
-    text-align: center;
   }
-  .grid .form-col label.for-radio, .grid .form-col label.for-checkbox {
-    margin-bottom: 0;
+  .form-col label.for-radio, .form-col label.for-checkbox {
     flex-basis: 0;
   }
 }
@@ -984,8 +1062,8 @@ select.fullwidth {
     text-align: center;
   }
 
-  nav {
-    display: none;
+  .nav, .aside {
+    display: none !important;
   }
 
   .break-after-always {
@@ -1082,33 +1160,90 @@ select.fullwidth {
   flex-shrink: 0;
 }
 
-nav {
+.burger {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 55px;
+  height: 50px;
+}
+.burger.is-light .line {
+  background-color: #fff;
+  color: #777;
+}
+.burger.is-dark .line {
+  background-color: #4a4a4a;
+  color: #fff;
+}
+.burger .line {
+  position: absolute;
+  left: 10px;
+  height: 3px;
+  width: 35px;
+  border-radius: 0.35rem;
+  display: block;
+  transition: 0.5s;
+  transform-origin: center;
+}
+.burger .line:nth-child(1) {
+  top: 12px;
+}
+.burger .line:nth-child(2) {
+  top: 24px;
+}
+.burger .line:nth-child(3) {
+  top: 36px;
+}
+.burger.is-active .line:nth-child(1) {
+  transform: translateY(12px)rotate(-45deg);
+}
+.burger.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+.burger.is-active .line:nth-child(3) {
+  transform: translateY(-12px)rotate(45deg);
+}
+
+.nav .burger {
+  top: 7px;
+}
+
+.nav {
   background-color: #fff;
 }
-nav ul {
-  text-align: center;
+.nav ul {
   list-style-type: none;
   margin: 0;
 }
-nav ul li {
+.nav ul li {
   display: block;
+  padding: 0.3rem 1rem;
 }
-nav ul li a {
+.nav ul li:first-child {
+  padding-top: 0.8rem;
+}
+.nav ul li a {
   color: #777;
   text-decoration: none;
 }
-nav ul li a:hover {
+.nav ul li.is-home {
+  text-align: center;
+}
+.nav ul li:hover {
   background-color: #fff;
 }
+.nav ul li:hover.is-home {
+  background-color: transparent;
+}
 @media screen and (max-width: 768px) {
-  nav {
+  .nav {
     border-bottom: 1px solid #eee;
     margin-bottom: 10px;
     padding-bottom: 15px;
   }
 }
 @media screen and (min-width: 769px) {
-  nav {
+  .nav {
     overflow: hidden;
     background-color: #f9f9f9;
     position: fixed;
@@ -1116,19 +1251,17 @@ nav ul li a:hover {
     width: 100%;
     height: 49px;
   }
-  nav.on-top {
+  .nav.on-top {
     z-index: 999;
     position: sticky;
   }
-  nav ul {
+  .nav ul {
     text-align: center;
     margin: 0;
     padding: 15px;
   }
-  nav ul li {
+  .nav ul li, .nav ul li:first-child {
     display: inline;
-  }
-  nav ul li a {
     padding: 1.2rem;
   }
 }
@@ -1137,6 +1270,67 @@ nav ul li a:hover {
   body.has-nav {
     padding-top: 49px;
   }
+}
+
+@media screen and (min-width: 769px) {
+  .has-aside {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.has-aside .aside {
+  background-color: #4a4a4a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.has-aside .aside.is-light {
+  background-color: #fff;
+  color: #777;
+}
+.has-aside .aside.is-dark {
+  background-color: #4a4a4a;
+  color: #fff;
+}
+@media screen and (min-width: 769px) {
+  .has-aside .aside {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1538px) {
+  .has-aside .aside {
+    width: 16.6%;
+    flex: none;
+    max-width: 450px;
+  }
+}
+.has-aside .aside ul.aside-nav {
+  list-style: none;
+  padding: 0.75rem;
+  line-height: 1.25;
+  flex-grow: 1;
+}
+.has-aside .aside ul.aside-nav li {
+  padding: 0.75rem;
+}
+.has-aside .aside ul.aside-nav li:hover {
+  background-color: #646464;
+}
+.has-aside .aside .aside-header, .has-aside .aside .aside-footer {
+  padding: 1rem 1.5rem;
+}
+.has-aside .aside .aside-header {
+  background-color: #313131;
+}
+.has-aside .aside .aside-footer {
+  background-color: #313131;
+}
+.has-aside .aside-content {
+  margin: 0;
+  flex-grow: 1;
 }
 
 .notification {
@@ -1201,6 +1395,10 @@ nav ul li a:hover {
 }
 .stacked.grid {
   margin: 0px;
+}
+.stacked > * {
+  padding: 0.35rem;
+  padding-left: 0.75rem;
 }
 .stacked > *:nth-child(odd) {
   border-left: 4px solid #ee4d4d;

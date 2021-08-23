@@ -6,35 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>oxxopus css demo file</title>
-    <link rel="stylesheet" href="assets/page.css" type="text/css">
+    <link rel="stylesheet" href="../page.css" type="text/css">
 </head>
 
 <body class="has-nav">
-    <nav>
-        <ul>
-            <li><a>oxxo</a></li>
+    <nav class="nav">
+        <div class="mobile burger is-dark" data-target="main-menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <ul id="main-menu" class="desktop">
+            <li class="is-home"><a>oxxo</a></li>
             <li><a href="#grid">Grid</a></li>
             <li><a href="#forms">Forms</a></li>
             <li><a href="#boxed">Boxed</a></li>
             <li><a href="#notification">Notification</a></li>
             <li><a href="#tags">Tags</a></li>
             <li><a href="#tabs">Tabs</a></li>
+            <li><a href="#aside">Aside</a></li>
         </ul>
+
     </nav>
 
     <div class="notification blue">
         <strong class="like-h5">Henlo friend!</strong>
         <p>Ive been using this nano/micro whatever framework for hobby projects for years now.</p>
         <p>There might be a day where I feel like documenting it further but for now thats enough.</p>
-        <p>If you look for something more serious: check out TailwindCSS, Bulma or Bootstrap. Thanks for your attention.</p>
-      
+        <p>If you look for something more serious: check out TailwindCSS, Bulma or Bootstrap. Thanks for your attention.
         </p>
-      </div>
+
+        </p>
+    </div>
     <section class="section">
         <h2 id="grid">The Grid</h2>
         <p class="block-space">
-            Well - thats something I always kind of need, a robust grid system. Tough I never felt the need for more then
-            five columns (you may disagree but thats my personal opinion). So the grid system ships with up to 5 fixed columns
+            Well - thats something I always kind of need, a robust grid system. Tough I never felt the need for more
+            then
+            five columns (you may disagree but thats my personal opinion). So the grid system ships with up to 5 fixed
+            columns
             and autosizing by default (flexbox). Altough its extendable quite easyly.
             <strong> Lets have a look..</strong>
         </p>
@@ -92,7 +102,7 @@
             </div>
             <div class="col">
                 <div class="boxed green">
-                        flexible length accoring
+                    flexible length accoring
                 </div>
             </div>
             <div class="col">
@@ -111,7 +121,7 @@
             The gutter can be adjusted in _grid.sass with the variable <i>$grid-gutter</i>
         </p>
     </section>
-    <section class="section fade-in animation-cascade-1--slow">
+    <section class="section">
         <h2 id="forms">Forms</h2>
         <p>
             Well, when I hate one things its forms.
@@ -149,11 +159,31 @@
             </div>
             <button>Reset</button> <button type="submit">Send</button>
         </form>
+        <h4>In Grid</h4>
+        <form action="#" method="post">
+            <div class="grid">
+                <div class="col form-col">
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="user_name">
+                </div>
+                <div class="col form-col">
+                    <label for="mail">E-mail: </label>
+                    <input type="email" id="mail" name="user_mail">
+                </div>
+                <div class="col one form-col">
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </div>
+                <div class="col form-col">
+                    <button>Reset</button> <button type="submit">Send</button>
+                </div>
+            </div>
 
+        </form>
     </section>
-    <section class="section fade-in animation-cascade-2--slow">
+    <section class="section">
         <h2 id="boxed">Boxed</h2>
-        <p class="block-space">Boxed has been  proven robust enough to eliminate card.</p>
+        <p class="block-space">Boxed has been proven robust enough to eliminate card.</p>
         <div class="boxed">
             <h3 class="like-h5 flex center-h center-v">a boxed example</h3>
             <form class="block-space">
@@ -164,12 +194,15 @@
 
                     </div>
                     <div class="col form-col">
-                        <label>Language</label>
-                        <input type="radio" checked="" id="lang_de" name="lang" value="de">
-                        <label class="for-radio" for="lang_de">Deutsch</label>
-                        &nbsp;
-                        <input type="radio" id="lang_en" name="lang" value="en">
-                        <label class="for-radio" for="lang_en">English</label>
+                        <ul>
+                            <li>
+                                <label>Language</label>
+                                <input type="radio" checked="" id="lang_de" name="lang" value="de">
+                                <label class="for-radio" for="lang_de">Deutsch</label>
+                            </li>
+                            <li> <input type="radio" id="lang_en" name="lang" value="en">
+                                <label class="for-radio" for="lang_en">English</label></li>
+                        </ul>
                     </div>
                     <div class="col form-col">
                         <label for="format">Format</label>
@@ -191,20 +224,20 @@
         <div class="notification red">
             <strong class="like-h5">Attention!</strong>
             <p>I am too lazy to re-write the docs. Since noone besides me is using it its just loose examples now .</p>
-          
+
             </p>
-          </div>
+        </div>
     </section>
 
     <section class="section">
         <h2 id="tags">Tags</h2>
-    	<h4>Examples</h4>
-				<ul class="tags">
-					<li>Normal one</li>
-					<li class="red">Red one</li>
-					<li class="blue">Blue one</li>
-					<li>Normal one</li>
-				</ul>
+        <h4>Examples</h4>
+        <ul class="tags">
+            <li>Normal one</li>
+            <li class="red">Red one</li>
+            <li class="blue">Blue one</li>
+            <li>Normal one</li>
+        </ul>
     </section>
 
     <section class="section">
@@ -212,33 +245,122 @@
         <h4>Examples</h4>
         <hr data-text="Plain Tabs">
         <div class="tabs">
-          <input type="radio" name="example-tabs" id="example-tab-one" checked="checked">
-          <label for="example-tab-one">Tab</label>
-          <div class="tab">
-            <span>Work hard</span>
-          </div>
+            <input type="radio" name="example-tabs" id="example-tab-one" checked="checked">
+            <label for="example-tab-one">Tab</label>
+            <div class="tab">
+                <span>Work hard</span>
+            </div>
 
-          <input type="radio" name="example-tabs" id="example-tab-two">
-          <label for="example-tab-two">Tab</label>
-          <div class="tab">
-            <span>Play hard</span>
-          </div>
+            <input type="radio" name="example-tabs" id="example-tab-two">
+            <label for="example-tab-two">Tab</label>
+            <div class="tab">
+                <span>Play hard</span>
+            </div>
         </div>
         <hr data-text="Outlined Tabs">
         <div class="tabs outlined">
-          <input type="radio" name="example-outlined-tabs" id="example-outlined-tab-one" checked="checked">
-          <label for="example-outlined-tab-one">Tab</label>
-          <div class="tab">
-            <span>Work hard</span>
-          </div>
+            <input type="radio" name="example-outlined-tabs" id="example-outlined-tab-one" checked="checked">
+            <label for="example-outlined-tab-one">Tab</label>
+            <div class="tab">
+                <span>Work hard</span>
+            </div>
 
-          <input type="radio" name="example-outlined-tabs" id="example-outlined-tab-two">
-          <label for="example-outlined-tab-two">Tab</label>
-          <div class="tab">
-            <span>Play hard</span>
-          </div>
+            <input type="radio" name="example-outlined-tabs" id="example-outlined-tab-two">
+            <label for="example-outlined-tab-two">Tab</label>
+            <div class="tab">
+                <span>Play hard</span>
+            </div>
         </div>
     </section>
+
+    <hr data-text="Aside demo" id="aside" class="block-space">
+    <section class="has-aside">
+        <aside class="aside">
+            <div class="aside-header">
+                <strong>oxxo</strong>
+            </div>
+            <ul class="aside-nav">
+                <li>
+                    Item A
+                </li>
+                <li>
+                    Item B
+                </li>
+            </ul>
+            <div class="aside-footer">
+                <a href="#">Questions?</a>
+            </div>
+        </aside>
+        <div class="aside-content">
+            <section class="section">
+                <h1>well well well</h1>
+                <p class="block-space">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas necessitatibus, voluptatibus cumque
+                    molestias officiis ut consectetur quo velit natus, libero ex rem eaque aut maiores possimus animi
+                    ipsum ratione quis?
+                </p>
+            </section>
+
+        </div>
+    </section>
+    <hr>
+    <section class="section">
+        <div class="plain">
+            <h1>Plain</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eveniet sunt quas voluptatum nam qui
+                molestiae nihil reprehenderit sequi inventore, expedita rem vel impedit. Itaque consequatur enim
+                mollitia natus deserunt?</p>
+            <a href="#">Link</a>
+            <br>
+            <br>
+            <code>test</code>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Test A</td>
+                        <td>Test B</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>A</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <ul>
+                <li>A</li>
+                <li>B</li>
+            </ul>
+        </div>
+    </section>
+    <section class="section">
+        <h1>Stacked</h1>
+        <p class="block-space">
+            Just stacks items with a border on it side
+        </p>
+        <div class="stacked">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+        </div>
+    </section>
+
+    <script>
+        var el = document.querySelector('.burger');
+        el.onclick = function () {
+            el.classList.toggle('is-active');
+            const target = el.dataset.target;
+            document.getElementById(`${target}`).classList.toggle('desktop')
+        }
+    </script>
 </body>
 
 </html>
