@@ -3,11 +3,13 @@ $aside-text-color: $font-color-bright
 $aside-footer-background: darken($content-bg-dark, 10%)
 $aside-header-background: darken($content-bg-dark, 10%)
 $aside-hover-color: lighten($content-bg-dark, 10%)
-
+html
+  height: 100%
 .has-aside
   +desktop
     display: flex
-    flex-wrap: wrap
+    flex-wrap: nowrap
+    height: 100%
   .aside
     background-color: $aside-background
     color:  $font-color-bright
@@ -19,9 +21,9 @@ $aside-hover-color: lighten($content-bg-dark, 10%)
     flex-shrink: 1
     +desktop
       width: 25%
+      flex: none
     @media screen and (min-width: ($mobile-break-point + 1px) * 2)
       width: 16.6%
-      flex: none
       max-width: 450px
     & ul.aside-nav
       list-style: none

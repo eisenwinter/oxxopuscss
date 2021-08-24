@@ -14,10 +14,12 @@
   &.primary
     background-color: $primary
     color: $primary-font-color
+    border-color: $primary-font-color
   @each $name, $colors in $palette
     &.#{$name}
       color: nth($colors,2)
       background-color: nth($colors,1)
+      border-color: nth($colors,2)
 
 @mixin variation-selectors($parent, $selectors...)
   @for $i from 0 to length($selectors)
@@ -48,18 +50,28 @@
   &.is-light
     background-color: $content-bg
     color: $font-color-dark
+    & a
+      color: $font-color-dark
+      &:hover
+        color: lighten($font-color-dark,5%)
   &.is-dark
     background-color: $content-bg-dark
     color: $font-color-bright
+    & a
+      color: $font-color-bright
+      &:hover
+        color: lighten($font-color-bright,5%)
 
 @mixin light-dark-selectors($selectors...)
   @for $i from 0 to length($selectors)
     &.is-light #{nth($selectors, $i + 1)}
       background-color: $content-bg
       color: $font-color-dark
+      border-color: $font-color-dark
     &.is-dark #{nth($selectors, $i + 1)}
       background-color: $content-bg-dark
       color: $font-color-bright
+      border-color: $font-color-bright
 
 =border
   border: $default-border

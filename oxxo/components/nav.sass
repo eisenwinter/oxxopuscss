@@ -5,15 +5,17 @@ $nav-link-hover-color: $font-color-bright !default
 $nav-height: 49px !default
 
 .nav
+  display: flex
   background-color: $nav-background-color-mobile
   ul
     list-style-type: none
     margin: 0
+    width: 100%
     li
       display: block
       padding: 0.3rem 1rem
       &:first-child
-        padding-top: 0.8rem
+        margin-top: 0.8rem
       a
         color: $nav-link-color
         text-decoration: none
@@ -28,6 +30,12 @@ $nav-height: 49px !default
     margin-bottom: 10px
     padding-bottom: 15px
   +desktop
+    flex-direction: row
+    justify-content: space-between
+    &.is-right
+      justify-content: flex-end
+    &.is-center
+      justify-content: center
     overflow: hidden
     background-color: $nav-background-color
     position: fixed
@@ -41,9 +49,16 @@ $nav-height: 49px !default
       text-align: center
       margin: 0
       padding: 15px
+      width: auto
       li, li:first-child
         display: inline
         padding: 1.2rem
+  +light-dark
+  &.is-dark li:hover
+     background-color: darken($nav-link-hover-color, 50%)
+  &.is-narrow
+    margin-bottom: 0
+    border-bottom: none
 body.has-nav
   +desktop
     padding-top: $nav-height

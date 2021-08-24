@@ -6,22 +6,31 @@ $hero-padding: 3rem !default
   background-color: $boxed-background
   padding: 1.5rem
   +variations
+  +light-dark
   +shadow
-  &.half
+  & .box-title
+    border: 1px solid #eee
+    font-size: 1.2rem
+    width: 100%
+    display: block
+    padding-bottom: 0.35rem
+    margin-bottom: 0.75rem
+    border-bottom: 1px solid darken($boxed-background, 15%)
+  &.is-half
     +mobile
       margin: 3rem
     +desktop
       width: 50%
       margin: 0 auto
-  &.spaced
+  &.is-spaced
     +desktop
       margin: 40px auto
-  &.borderless
+  &.is-borderless
     border: 0
-  &.transparent
+  &.is-transparent
     border: 0
     background-color: transparent
-  &.hero
+  &.is-hero
     display: flex
     flex-direction: column
     align-items: stretch
